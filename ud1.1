@@ -1,8 +1,4 @@
-# UD 1.1 · HTML Básico
-
-## Ejercicio 1. Tu primera página HTML
-
-Archivo: `11_1.html`
+### Código `11_1.html`
 
 ```html
 <!DOCTYPE html>
@@ -20,9 +16,23 @@ Archivo: `11_1.html`
 </html>
 ```
 
-## Ejercicio 2. Completando la cabecera
+### Conclusión
 
-Archivo: `11_2.html`
+Todo documento HTML5 tiene una estructura mínima: declaración de tipo de documento, elemento raíz, cabecera (`head`) con la información del documento y cuerpo (`body`) con el contenido visible.
+
+---
+
+## 2. Completando la cabecera
+
+### Requisitos
+
+1. Etiqueta `<meta>` de tipo `description`.
+2. Etiqueta `<meta>` de tipo `keywords` con 4 o 5 palabras clave.
+3. Comentario justo antes de `<body>`.
+4. Segundo párrafo sobre el módulo de Lenguajes de marcas.
+5. Al menos un comentario más dentro del `body`.
+
+### Código `11_2.html`
 
 ```html
 <!DOCTYPE html>
@@ -49,9 +59,24 @@ Archivo: `11_2.html`
 </html>
 ```
 
-## Ejercicio 3. Caracteres especiales y validación
+### Conclusión
 
-Archivo: `11_3.html`
+Las etiquetas `<meta>` aportan información sobre la página (resumen y palabras clave) que no se muestra en pantalla pero sí usan los buscadores. Los comentarios `<!-- -->` documentan el código y el navegador no los muestra.
+
+---
+
+## 3. Caracteres especiales y validación
+
+### Parte A - Entidades
+
+El símbolo `<` se confunde con el inicio de una etiqueta y el símbolo `&` con el inicio de una entidad, por eso hay que escribirlos con entidades HTML.
+
+| Carácter | Entidad |
+|---|---|
+| `<` | `&lt;` |
+| `&` | `&amp;` |
+
+### Código `11_3.html`
 
 ```html
 <!DOCTYPE html>
@@ -68,9 +93,39 @@ Archivo: `11_3.html`
 </html>
 ```
 
-## Ejercicio 4. Detective de errores
+### Parte B - Validación
 
-Archivo: `11_4.html`
+El archivo se sube al validador de W3C (https://validator.w3.org/#validate_by_upload) y debe pasar sin errores.
+
+### Conclusión
+
+Las entidades HTML permiten mostrar caracteres reservados sin que el navegador los interprete como parte del código.
+
+---
+
+## 4. Detective de errores
+
+### Código original con errores
+
+```html
+<!DOCTYPE htm>
+<html lan=es>
+<head>
+<title>Página de contacto
+</head>
+<body>
+<h1>Contacto<h1>
+<p>Escríbenos a <b>info@instituto.es</p></b>
+<p>Horario de atención: Lunes a Viernes, 9:00 - 14:00
+<ul>
+<li>Teléfono
+<li>Email
+</ul>
+</body>
+</html>
+```
+
+### Código corregido `11_4.html`
 
 ```html
 <!DOCTYPE html>
@@ -91,7 +146,7 @@ Archivo: `11_4.html`
 </html>
 ```
 
-Archivo: `errores11_4.txt`
+### Errores encontrados `errores11_4.txt`
 
 ```text
 1. Línea 1: <!DOCTYPE htm> -> el tipo de documento está mal escrito.
@@ -119,4 +174,4 @@ Archivo: `errores11_4.txt`
 
 9. Líneas 11-12: <li>Teléfono / <li>Email -> elementos de lista sin cerrar.
    Correcto: <li>Teléfono</li> y <li>Email</li>
-   ``` 
+```
