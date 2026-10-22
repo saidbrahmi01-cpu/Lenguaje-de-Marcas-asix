@@ -1,5 +1,10 @@
-UD 1.1 · HTML Básico 
-```
+# UD 1.1 · HTML Básico
+
+## Ejercicio 1. Tu primera página HTML
+
+Archivo: `11_1.html`
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,5 +18,106 @@ UD 1.1 · HTML Básico
     constante evolución.</p>
 </body>
 </html>
-``` 
+```
 
+## Ejercicio 2. Completando la cabecera
+
+Archivo: `11_2.html`
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página personal de presentación de un estudiante de desarrollo de aplicaciones.">
+    <meta name="keywords" content="HTML, desarrollo, web, ciclo formativo, lenguajes de marcas">
+    <title>Tu Nombre - Mi primera página</title>
+</head>
+<!-- Inicio del cuerpo del documento -->
+<body>
+    <h1>Hola, soy Tu Nombre</h1>
+
+    <!-- Párrafo 1: motivos por los que he elegido el ciclo formativo -->
+    <p>He elegido este ciclo formativo porque me apasiona la tecnología y quiero aprender a crear
+    aplicaciones y páginas web. Creo que es una profesión con muchas salidas laborales y en
+    constante evolución.</p>
+
+    <!-- Párrafo 2: expectativas del módulo de Lenguajes de marcas -->
+    <p>En el módulo de Lenguajes de marcas espero aprender a estructurar documentos con HTML,
+    dar formato con CSS y trabajar con XML para almacenar e intercambiar datos.</p>
+</body>
+</html>
+```
+
+## Ejercicio 3. Caracteres especiales y validación
+
+Archivo: `11_3.html`
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Caracteres especiales</title>
+</head>
+<body>
+    <h1>Entidades HTML</h1>
+    <p>La condición si edad &lt; 18 &amp;&amp; tiene_permiso == true se evalúa en tiempo real.
+    El símbolo &amp; se usa mucho en programación.</p>
+</body>
+</html>
+```
+
+## Ejercicio 4. Detective de errores
+
+Archivo: `11_4.html`
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de contacto</title>
+</head>
+<body>
+    <h1>Contacto</h1>
+    <p>Escríbenos a <b>info@instituto.es</b></p>
+    <p>Horario de atención: Lunes a Viernes, 9:00 - 14:00</p>
+    <ul>
+        <li>Teléfono</li>
+        <li>Email</li>
+    </ul>
+</body>
+</html>
+```
+
+Archivo: `errores11_4.txt`
+
+```text
+1. Línea 1: <!DOCTYPE htm> -> el tipo de documento está mal escrito.
+   Correcto: <!DOCTYPE html>
+
+2. Línea 2: <html lan=es> -> el atributo se llama "lang", no "lan".
+   Correcto: <html lang="es">
+
+3. Línea 2: el valor del atributo no lleva comillas (lan=es).
+   Correcto: lang="es"
+
+4. Cabecera: falta <meta charset="UTF-8"> para declarar la codificación.
+
+5. Línea 4: <title>Página de contacto -> la etiqueta <title> no está cerrada.
+   Correcto: <title>Página de contacto</title>
+
+6. Línea 7: <h1>Contacto<h1> -> la etiqueta de cierre está mal escrita.
+   Correcto: <h1>Contacto</h1>
+
+7. Línea 8: <p>Escríbenos a <b>info@instituto.es</p></b> -> etiquetas mal anidadas.
+```
+
+   Correcto: <b>...</b></p>
+
+8. Línea 9: <p>Horario de atención... -> el párrafo no está cerrado.
+   Correcto: añadir </p> al final.
+
+9. Líneas 11-12: <li>Teléfono / <li>Email -> elementos de lista sin cerrar.
+   Correcto: <li>Teléfono</li> y <li>Email</li>
